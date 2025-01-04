@@ -8,7 +8,7 @@
 #ifndef shaders_hpp
 #define shaders_hpp
 
-struct Shaders
+struct GLSL
 {
     
 public:
