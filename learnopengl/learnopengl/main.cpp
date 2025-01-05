@@ -24,7 +24,7 @@ int main() {
 
     // Create and compile shaders
     GLSL glsl;
-    Shader shader(glsl.vertexShaderSourceColored, glsl.fragmentShaderSourceVertexInput);
+    Shader shader(glsl.vertexShaderSource, glsl.fragmentShaderSourceUniformInput);
     if (!shader.isCompiled()) {
         return -1;
     }
@@ -37,7 +37,7 @@ int main() {
     while (!window.shouldClose()) {
         window.processInput();
 
-        glClearColor(0.06f, 0.9f, 0.3f, 0.2f);
+        glClearColor(0.56f, 0.02f, 0.4f, 0.2f);
         glClear(GL_COLOR_BUFFER_BIT);
         
         // Render

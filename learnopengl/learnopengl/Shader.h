@@ -18,9 +18,10 @@ public:
 
     void use() const;
     bool isCompiled() const { return m_compiled; }
+    unsigned int m_ID;
 
 private:
-    unsigned int m_ID;
+    
     bool m_compiled;
 
     std::string loadShaderSource(const std::string& filepath) const;

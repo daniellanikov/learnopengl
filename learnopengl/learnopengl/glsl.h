@@ -49,6 +49,14 @@ public:
         "{\n"
         "   FragColor = vertexColor;\n"
         "}\n\0";
+    
+    const char *fragmentShaderSourceUniformInput = "#version 330 core\n"
+        "out vec4 FragColor;\n"
+        "uniform vec4 ourColor;\n"
+        "void main()\n"
+        "{\n"
+        "   FragColor = ourColor;\n"
+        "}\n\0";
 };
 
 #endif /* shaders_hpp */
