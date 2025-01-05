@@ -31,6 +31,16 @@ public:
         -0.5f,  0.5f, 0.0f,
     };
     
+    float vertices_double[18] = {
+        -1.0f, -0.5f, 0.0f,
+         0.0f, -0.5f, 0.0f,
+        -0.5f,  0.5f, 0.0f,
+        
+        0.0f, -0.5f, 0.0f,
+        1.0f, -0.5f, 0.0f,
+        0.5f,  0.5f, 0.0f
+    };
+    
     float vertices_rectangle[12] = {
          0.5f,  0.5f, 0.0f,  // top right
          0.5f, -0.5f, 0.0f,  // bottom right
