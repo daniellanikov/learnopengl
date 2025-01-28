@@ -71,3 +71,18 @@ void Shader::compileShader(unsigned int shader, const char* source) {
         m_compiled = false;
     }
 }
+
+void Shader::setBool(const std::string &name, bool value) const{
+    glUniform1i(glGetUniformLocation(m_ID, name.c_str()), (int)value);
+}
+
+void Shader::setInt(const std::string &name, int value) const{
+    glUniform1i(glGetUniformLocation(m_ID, name.c_str()), value);
+}
+
+void Shader::setFloat(const std::string &name, float value) const{
+    int vertexColorLocation = glGetUniformLocation(m_ID, name.c_str());
+    glUseProgram(m_ID);
+    glUniform3f(vertexColorLocation, value, 0.2f, 0.5f);
+    //glUniform1f(glGetUniformLocation(m_ID, name.c_str()), value);
+}

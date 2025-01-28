@@ -50,6 +50,7 @@ void Renderer::render(const Shader& shader) {
     int vertexColorLocation = glGetUniformLocation(shader.m_ID, "ourColor");
     glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
     
+    shader.setFloat("offset", 0.5f);
     
     glBindVertexArray(VAO);
     //glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
