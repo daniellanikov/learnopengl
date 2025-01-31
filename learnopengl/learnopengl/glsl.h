@@ -37,8 +37,8 @@ public:
         "uniform vec3 offset;\n"
         "void main()\n"
         "{\n"
-        "   gl_Position = vec4(aPos.x + offset.x, aPos.y * -1, aPos.z, 1.0);\n"
-        "   ourColor = aColor;\n"
+        "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
+        "   ourColor = vec3(aPos.x, aPos.y, aPos.z);\n"
         "}\0";
     
     //-------------------------------Fragment Shader Sources-------------------------------
@@ -66,11 +66,11 @@ public:
         "}\n\0";
     
     const char *fragmentShaderSourceVertexInput2 = "#version 330 core\n"
-        "out vec4 FragColor;\n"
+        "out vec3 FragColor;\n"
         "in vec3 ourColor;\n"
         "void main()\n"
         "{\n"
-        "   FragColor = vec4(ourColor, 1.0);\n"
+        "   FragColor = ourColor;\n"
         "}\n\0";
 };
 
